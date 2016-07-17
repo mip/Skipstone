@@ -102,7 +102,7 @@ void win_vlc_set_seek(uint8_t val) {
 
 static void update_timer_callback(void *data) {
 	vlc_request(KEY_REQUEST_REFRESH);
-	update_timer = app_timer_register(10000, update_timer_callback, NULL);
+	update_timer = app_timer_register(60000, update_timer_callback, NULL);
 }
 
 static void up_single_click_handler(ClickRecognizerRef recognizer, void *context) {
